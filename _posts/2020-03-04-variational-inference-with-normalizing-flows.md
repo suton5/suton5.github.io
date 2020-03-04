@@ -1,7 +1,9 @@
 ---
 layout: post
-published: false
+published: true
 title: Variational Inference with Normalizing Flows
+subtitle: 'Paper by : Danilo Jimenez Rezende and Shakir Mohamed'
+date: '2020-03-04'
 ---
 ### Motivation
 The broad idea of Variational Inference (VI) is to approximate a hard posterior $p$ (does not have an analytical form and we cannot easily sample from it) with a distribution $q$ from a family $Q$ that is easier to sample from. The choice of this $Q$ is one of the core problems in VI. Most applications employ simple families to allow for efficient inference, focusing on mean-field assumptions. This states that our approximate distribution 
