@@ -89,6 +89,20 @@ $$\begin{align}
     x_n &\sim p_\theta(x_n|z_n), \; \mathbf{(likelihood)}
 \end{align}$$
 
+<table>
+    <tr>
+        <td>
+            <img src="./fig/vae_graphical.png" style="height:200px;" align="center">
+        </td>
+        <td>
+            \begin{align}
+            	z_n &\sim p_\theta(z), \; \mathbf{(prior)}\\
+            	x_n &\sim p_\theta(x_n|z_n), \; \mathbf{(likelihood)}
+            \end{align}
+        </td>
+    </tr>
+</table>
+
 Hence we need to : 
 
 - Learn $f_\theta$, ***the generative network***, that will learn the mapping from latent variable $z_n$ to observed data $x_n$. Hopefully, we can learn to mimic the empirical distribution of observed data well.
