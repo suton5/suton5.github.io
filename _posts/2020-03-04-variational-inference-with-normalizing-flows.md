@@ -82,13 +82,6 @@ This paper proposes a technique to implement VI using Normalizing Flows. The mai
  
 We will now provide deeper explanations of the above ideas. As an overview, we consider the general Variational Autoencoder (VAE) structure. A VAE is an unsupervised learning method that seeks to find a low-dimensional representation of usually high-dimensional data. For instance, if the observed data (denoted $\mathbf{X}$) is 100-dimensions, one might try to map those observed data into a latent space of 10 dimensions (where the latent variable is denoted $\mathbf{Z}$). This mapping is done through a simple neural network, called an **inference** or recognition network. Then, this latent representation $\mathbf{Z}$ can be used to generate new data by running the learned latent variables through a second neural network called a **generative** network. This process of mapping observed to latent variables and back to observed is characteristic of an autoencoder model. However, a **variational** autoencoder changes this paradigm. Rather than learning a single latent vector $\mathbf{z}_ n$ for each observed vector $\mathbf{x}_ n$, the inference network outputs the parameters of a **distribution** of possible $\mathbf{z}_ n$'s for each $\mathbf{x}_ n$. Typically, in order to make inference tractable, these parameters are the mean and variance of a diagonal gaussian. Another trick to optimize VAEs is **amortisation**. That is, rather than learning a set of $\mu$'s, $\sigma$'s, and flow parameters for each observation, we can instead notice that observed data points that are nearby in observed space should be similarly close in latent space. That means that we can instead learn a function $g_\phi(\mathbf{x})$, parameterised by $\phi$ that takes in observed data and outputs the mu, sigma, and flow parameters for those data. This is much computationall cheaper than the learning of explicit parameters for each data point. This amortisation is accomplished by the inference network itself. For more on variational autoencoders, see (Kingma & Welling, 2014) (https://arxiv.org/abs/1312.6114). This is summarized in the following (Pan, 2019): 
 
-<img src="/images/vae_graphical.png" style="height:200px;" align="center">
-
-$$\begin{align}
-	z_n &\sim p_\theta(z), \; \mathbf{(prior)}\\
-    x_n &\sim p_\theta(x_n|z_n), \; \mathbf{(likelihood)}
-\end{align}$$
-
 <table>
     <tr>
         <td>
