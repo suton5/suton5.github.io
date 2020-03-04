@@ -92,7 +92,7 @@ $$\begin{align}
 <table>
     <tr>
         <td>
-            <img src="./fig/vae_graphical.png" style="height:200px;" align="center">
+            <img src="/images/vae_graphical.png" style="height:200px;" align="center">
         </td>
         <td>
             \begin{align}
