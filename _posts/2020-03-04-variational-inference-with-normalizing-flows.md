@@ -107,7 +107,7 @@ Hence we need to :
 
 - Learn $f_\theta$, ***the generative network***, that will learn the mapping from latent variable $z_n$ to observed data $x_n$. Hopefully, we can learn to mimic the empirical distribution of observed data well.
 
-- Learn $g_\phi$, ***the inference network***, that will learn the mapping from observed data $x_n$ to latent variable $z_n$. Hopefully, we can learn to infer the best approximation to the posterior $p(z_n|x_n)$ given an observation $x_n$.
+- Learn $g_\phi$, ***the inference network***, that will learn the mapping from observed data $x_n$ to latent variable $z_n$. Hopefully, we can learn to infer the best approximation to the posterior $p(z_n | x_n)$ given an observation $x_n$.
 
 These are summarized in the image below : 
 
