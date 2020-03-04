@@ -84,16 +84,10 @@ We will now provide deeper explanations of the above ideas. As an overview, we c
 
 <img src="/images/VAE_graphical.png" style="height:200px;" align="center">
 
-<table>
-    <tr>
-        <td>
-            \begin{align}
-            z_n &\sim p_\theta(z), \; \mathbf{(prior)}\\
-            x_n &\sim p_\theta(x_n|z_n), \; \mathbf{(likelihood)}
-            \end{align}
-        </td>
-    </tr>
-</table>
+\begin{align}
+	z_n &\sim p_\theta(z), \; \mathbf{(prior)}\\
+    x_n &\sim p_\theta(x_n|z_n), \; \mathbf{(likelihood)}
+\end{align}
 
 Hence we need to : 
 
