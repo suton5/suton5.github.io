@@ -36,7 +36,7 @@ $$\int_\mathbf{z}q_k(\mathbf{z}_k)d\mathbf{z}_k = 1$$
 
 at each stage $k$ of the flow, resulting in a valid density at the end.
 
-We will consider the simple case of Planar flows, which introduces enough complexity in the approximate posterior $q$ for many applications. This uses an invertible and smooth mapping $f:\mathbb{R}^d \rightarrow \mathbb{R}^d$. We can think of these Planar flows as a sequence of expansions and contractions on the initial density $q_0$. If we use this to transform a random variable $\mathbf{z} \sim q(\mathbf{z})$, the resulting $\mathbf{z}^\prime = f(\mathbf{z})$ can be shown to be distributed as : 
+We will consider the simple case of Planar flows, which introduces enough complexity in the approximate posterior $q$ for many applications. This uses an invertible and smooth mapping  $f:\mathbb{R}^d \rightarrow \mathbb{R}^d$. We can think of these Planar flows as a sequence of expansions and contractions on the initial density $q_0$. If we use this to transform a random variable $\mathbf{z} \sim q(\mathbf{z})$, the resulting $\mathbf{z}^\prime = f(\mathbf{z})$ can be shown to be distributed as : 
 
 $$q(\mathbf{z}^\prime) = q(\mathbf{z})\left|\det\frac{\partial f^{-1}}{\partial \mathbf{z}^\prime}\right| = q(\mathbf{z})\left|\det\frac{\partial f}{\partial \mathbf{z}^\prime}\right|^{-1}$$
 
